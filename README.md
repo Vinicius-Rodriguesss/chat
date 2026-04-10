@@ -111,6 +111,8 @@ FRONTEND_URL=http://localhost:3000
 PORT=3000
 ```
 
+`FRONTEND_URL` tambem pode receber multiplas origens separadas por virgula, por exemplo `http://localhost:5173,https://seu-front.vercel.app`. O backend normaliza a barra final automaticamente.
+
 ## Scripts
 
 ### Desenvolvimento
