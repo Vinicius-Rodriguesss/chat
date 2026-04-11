@@ -1,5 +1,5 @@
 import type { Request, Response } from "express";
-import requestChat from "./ChatService";
+import { generateAI } from "../../service/IAgemini";
 
 const chatController = async (req: Request, res: Response) => {
   try {
@@ -9,7 +9,7 @@ const chatController = async (req: Request, res: Response) => {
       return res.status(400).json({ error: "Prompt invalido" });
     }
 
-    const response = await requestChat(prompt);
+    const response = await generateAI(prompt);
 
     return res.json({ response });
   } catch (error) {
